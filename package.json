@@ -1,0 +1,23 @@
+{
+  "name": "topple-stack",
+  "version": "1.0.0",
+  "description": "Topple Stack data type",
+  "main": "topple-stack.js",
+  "scripts": {
+    "test": "echo \"Trust me I tested it myself\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daseinkapital/ToppleStack.git"
+  },
+  "keywords": [
+    "topple",
+    "stack"
+  ],
+  "author": "daseinkapital",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daseinkapital/ToppleStack/issues"
+  },
+  "homepage": "https://github.com/daseinkapital/ToppleStack#readme"
+}
