@@ -2,9 +2,9 @@ var ToppleStack = function(capacity) {
     // Maximum capacity of items that the stack can hold
     this._capacity = capacity || Infinity;
     this._storage = {};
-
+    
     // Count variable to keep track of the size of the stack
-    this.count = 0;
+    this._count = 0;
 }
 
 // O (1)
@@ -49,15 +49,19 @@ ToppleStack.prototype.pop = function() {
 // forever. Input the index of the item you want and you lose
 // everything above it
 ToppleStack.prototype.topple = function(idx) {
+    idx++;
     var value = this._storage[idx];
-    for (let i = idx; i++; i < this._count) {
-        delete this._storage[i];
+    if (idx < this._count) {
+        for (let i = idx; i <= this._count; i++) {
+            delete this._storage[i];
+        }
+        this._count = idx - 1;
+        if (this._count < 0) {
+            this._count = 0;
+        }
+        return value
     }
-    this._count = idx;
-    if (this._count < 0) {
-        this._count = 0;
-    }
-    return value
+    return undefined
 }
 
 // O (1)
