@@ -1,4 +1,4 @@
-var ToppleStack = function(capacity) {
+exports.ToppleStack = function(capacity) {
     // Maximum capacity of items that the stack can hold
     this._capacity = capacity || Infinity;
     this._storage = {};
